@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml注入-->
+<!--      需要xml头部添加命名空间: -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd"
+       default-init-method="init">
+    <!--基于注解 需要配置包扫描 -->
+    <context:component-scan base-package="com.work.example.demo.entity" />
+    <!--    <context:component-scan base-package="com.project.example.demo.config" />-->
+    <!--配置实例-->
+<!--    <bean id="test" class="com.project.example.demo.dao.test.Test" scope="prototype" />-->
+    <!--    <bean id="user1" class="com.project.example.demo.entity.User" scope="prototype">-->
+    <!--        <property name="uid" value="1"/>-->
+    <!--        <property name="username" value="yourName"/>-->
+    <!--        <property name="passeword" value="yourPassword"/>-->
+    <!--        <property name="other" value="other Message"/>-->
+    <!--    </bean>-->
+
+<!--    <bean id="user3" class="com.project.example.demo.entity.User" scope="prototype">-->
+<!--        <property name="username" value="user2"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="school4" class="com.project.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="清华大学"/>-->
+<!--    </bean>-->
+<!--    <bean id="school5" class="com.project.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="北京大学"/>-->
+<!--    </bean>-->
+<!--    <bean id="school6" class="com.project.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="河南财经政法大学"/>-->
+<!--    </bean>-->
+<!--    <bean id="school7" class="com.project.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="湖南大学"/>-->
+<!--    </bean>-->
+<!--    <bean id="school8" class="com.project.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="中南大学"/>-->
+<!--    </bean>-->
+<!--    <bean id="school9" class="com.project.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="上海交通大学"/>-->
+<!--    </bean>-->
+
+<!--    xml方式注入 -->
+
+    <bean id="emp1" class="com.work.example.demo.entity.Employee" scope="prototype">
+<!--  设置属性-->
+        <property name="age" value="33"/>
+        <property name="company" ref="company1"/>
+        <property name="name" value="jingyujiupu"/>
+        <property name="number" value="01"/>
+    </bean>
+    <bean id="company1" class="com.work.example.demo.entity.Company" scope="prototype">
+        <property name="name" value="jing"/>
+        <property name="address" value="zhengzhou"/>
+        <property name="telephone" value="19513871662"/>
+    </bean>
+<!--    <bean id="school1" class="com.work.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="湖南大学"/>-->
+<!--        <property name="other" value="985 211 双一流"/>-->
+<!--        <property name="address" value="湖南省长沙市"/>-->
+<!--    </bean>-->
+<!--    <bean id="school2" class="com.work.example.demo.entity.School" scope="prototype">-->
+<!--        <property name="name" value="中南大学"/>-->
+<!--        <property name="other" value="985 211 双一流"/>-->
+<!--        <property name="address" value="湖南省长沙市"/>-->
+<!--    </bean>-->
+<!--    <bean id="stu2" class="com.work.example.demo.entity.Student" scope="prototype">-->
+<!--        &lt;!&ndash;        设置属性&ndash;&gt;-->
+<!--        <property name="sid" value="002"/>-->
+<!--        <property name="age" value="18"/>-->
+<!--        <property name="major" value="计算机科学与技术"/>-->
+<!--        <property name="name" value="小花"/>-->
+<!--        <property name="sex" value="未知"/>-->
+<!--        <property name="school" ref="school2"/>-->
+<!--    </bean>-->
+<!--    <bean id="stu3" class="com.work.example.demo.entity.Student" scope="prototype">-->
+<!--        &lt;!&ndash;        设置属性&ndash;&gt;-->
+<!--        <property name="sid" value="003"/>-->
+<!--        <property name="age" value="18"/>-->
+<!--        <property name="major" value="计算机科学与技术"/>-->
+<!--        <property name="name" value="小红"/>-->
+<!--        <property name="sex" value="未知"/>-->
+<!--        <property name="school" ref="school1"/>-->
+<!--    </bean>-->
+<!--&lt;!&ndash; 注入集合 &ndash;&gt;-->
+<!--<bean id="studentManager" class="com.work.example.demo.entity.StudentManager" scope="prototype">-->
+<!--    <property name="smid" value="1"/>-->
+<!--    <property name="students">-->
+<!--              <util:list>-->
+<!--                  <ref bean="stu1"/>-->
+<!--                  <ref bean="stu2"/>-->
+<!--                  <ref bean="stu3"/>-->
+<!--              </util:list>-->
+<!--    </property>-->
+<!--</bean>-->
+
+</beans>
